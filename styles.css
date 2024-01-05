@@ -1,0 +1,26 @@
+.border-pane {
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Top, center, bottom */
+    grid-template-columns: auto 1fr auto; /* Left, center, right */
+    height: 100vh; /* Adjust height as needed */
+}
+.border-pane > header {
+    grid-row: 1;
+    grid-column: 1 / -1; /* Stretch across all columns */
+}
+.border-pane > footer {
+    grid-row: 3;
+    grid-column: 1 / -1; /* Stretch across all columns */
+}
+.border-pane > .left {
+    grid-row: 2;
+    grid-column: 1;
+}
+.border-pane > .right {
+    grid-row: 2;
+    grid-column: 3;
+}
+.border-pane > main {
+    grid-row: 2;
+    grid-column: 2;
+}
