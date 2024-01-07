@@ -36,3 +36,9 @@ body {
     justify-content: center;
 }
 
+
+#chessboard {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+}
