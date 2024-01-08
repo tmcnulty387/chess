@@ -18,17 +18,45 @@ for (let row = 0; row < boardSize; row++) {
         let square = document.createElement('div');
         square.id = String.fromCharCode('a'.charCodeAt(0) + col) + (boardSize - row);
         square.classList.add('chess-square');
-        chessboard.appendChild(square);
+        square.addEventListener("dragover", function(e){
+            e.preventDefault();
+        });
 
         if(chessPieces.has(square.id)){
             let piece = document.createElement('img');
+            piece.setAttribute('draggable', 'true');
             piece.id = chessPieces.get(square.id);
             piece.classList.add('chess-piece');
             piece.src = "chessPieces/" + piece.id + '.png';
             square.appendChild(piece);
         }
+        chessboard.appendChild(square);
     }
 }
+
+let pieces = document.getElementsByClassName('chess-piece');
+let boxes = document.getElementsByClassName('chess-square');
+let selectedPiece = null;
+
+for (let piece of pieces) {
+    piece.addEventListener("dragstart", function(e) {
+        selectedPiece = e.target;
+    });
+}
+
+for (let box of boxes) {
+    box.addEventListener("dragover", function(e) {
+        e.preventDefault();
+    });
+
+    box.addEventListener("drop", function(e) {
+        if (selectedPiece) {
+            e.target.appendChild(selectedPiece);
+            selectedPiece = null;
+        }
+    });
+}
+
 // Alternate color pattern for chess plots //!UNFINISHED
 /*let chessPieceBackground = document.querySelectorAll('chess-square');
 for(let i = 0; i < chessPieceBackground.length; i++){
