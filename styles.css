@@ -78,4 +78,12 @@ main {
 .chess-square {
     border: 1px solid #333333;
     background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chess-piece {
+    width: 100%;
+    background-color: aquamarine;
 }
