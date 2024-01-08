@@ -29,3 +29,6 @@ for (let row = 0; row < boardSize; row++) {
     }
 }
 
+function movePiece(){
+    // TODO
+}
