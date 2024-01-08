@@ -28,6 +28,16 @@ for (let row = 0; row < boardSize; row++) {
         }
     }
 }
+// Alternate color pattern for chess plots //!UNFINISHED
+/*let chessPieceBackground = document.querySelectorAll('chess-square');
+for(let i = 0; i < chessPieceBackground.length; i++){
+    if(i % 2 == 0){
+        chessPieceBackground[i].setAttribute('background-color', '#0f0ff0');
+    } else {
+        chessPieceBackground[i].setAttribute('background-color', '#0fffff');
+    }
+    
+}*/
 
 function movePiece(){
     // TODO
