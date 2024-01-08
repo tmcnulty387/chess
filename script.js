@@ -58,15 +58,19 @@ for (let box of boxes) {
 }
 
 // Alternate color pattern for chess plots //!UNFINISHED
-/*let chessPieceBackground = document.querySelectorAll('chess-square');
+let x = 0;
+let chessPieceBackground = document.getElementsByClassName('chess-square');
 for(let i = 0; i < chessPieceBackground.length; i++){
-    if(i % 2 == 0){
-        chessPieceBackground[i].setAttribute('background-color', '#0f0ff0');
+    if(x % 2 == 0){
+        chessPieceBackground[i].setAttribute('style','background-color: #00ff00');
     } else {
-        chessPieceBackground[i].setAttribute('background-color', '#0fffff');
+        chessPieceBackground[i].setAttribute('style','background-color: #dd0000');
     }
-    
-}*/
+    x += 1;
+    if(x == 8 || x == 17 || x == 26 || x == 35 || x == 44 || x == 53 || x == 62){
+    x += 1;
+    }
+}
 
 function movePiece(){
     // TODO

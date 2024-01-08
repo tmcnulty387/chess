@@ -85,6 +85,5 @@ main {
 
 .chess-piece {
     width: 100%;
-    background-color: aquamarine;
     cursor: grab;
 }
