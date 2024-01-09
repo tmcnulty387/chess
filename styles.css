@@ -87,3 +87,9 @@ main {
     width: 100%;
     cursor: grab;
 }
+#can-move-here {
+    width: 30%;
+    height: 30%;
+    background-color: red;
+    border-radius: 50px;
+}
